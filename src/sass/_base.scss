@@ -69,3 +69,40 @@ body {
     border-radius: 0;
   }
 }
+
+// Scrollbar
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 1);
+
+	&:hover {
+		border: 1px solid rgb(184, 184, 184);
+		border-radius: 30px;
+	}
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(51, 51, 51, 0.2);
+	border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #615551;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #b64722;
+}
+
+// Mobile
+
+@media only screen and (max-width: $bp-large) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+}

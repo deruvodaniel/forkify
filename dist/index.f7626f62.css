@@ -51,6 +51,40 @@ body {
   }
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+::-webkit-scrollbar-track:hover {
+  border: 1px solid #b8b8b8;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3333;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #615551;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b64722;
+}
+
+@media only screen and (max-width: 78.15em) {
+  .container {
+    flex-direction: column;
+    display: flex;
+  }
+}
+
 .btn--small, .btn--small:link, .btn--small:visited, .btn {
   text-transform: uppercase;
   color: #fff;
@@ -392,6 +426,33 @@ body {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-y: auto;
+  }
+
+  .header {
+    z-index: 9;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem;
+    position: fixed;
+  }
+
+  .header__logo {
+    margin: 0 0 1rem;
+  }
+
+  .search {
+    margin: 1rem;
+  }
+
+  .nav__list {
+    justify-content: space-around;
+    padding: 1rem;
+  }
+}
+
 .preview__link:link, .preview__link:visited {
   border-right: 1px solid #fff;
   align-items: center;
@@ -513,6 +574,13 @@ body {
 
 .pagination__btn--next {
   float: right;
+}
+
+@media screen and (max-width: 768px) {
+  .search-results {
+    width: 100%;
+    margin-top: 20rem;
+  }
 }
 
 .recipe {
@@ -676,6 +744,16 @@ body {
 
 .recipe__publisher {
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .message {
+    min-width: 100% !important;
+  }
+
+  .recipe__details {
+    padding: 4rem;
+  }
 }
 
 .add-recipe-window {

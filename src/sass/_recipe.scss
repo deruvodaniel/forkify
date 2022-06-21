@@ -179,3 +179,15 @@
     font-weight: 700;
   }
 }
+
+// Mobile
+@include mediumScreen {  
+  .message {
+    min-width: 100% !important;
+  }
+
+  .recipe__details{
+    padding: 4rem
+  }
+
+}

@@ -142,3 +142,32 @@
     opacity: 1;
   }
 }
+
+// Mobile
+@include mediumScreen {
+	html,
+	body {
+		overflow-y: auto;
+	}
+
+  .header {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .header__logo{
+    margin: 0 0 1rem 0;
+  }
+
+  .search {
+    margin: 1rem;
+  }
+
+  .nav__list {
+    justify-content: space-around;
+    padding: 1rem;
+  }
+}
