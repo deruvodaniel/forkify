@@ -144,7 +144,7 @@
 }
 
 // Mobile
-@include mediumScreen {
+@include mobileScreen {
 	html,
 	body {
 		overflow-y: auto;

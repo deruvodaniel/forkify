@@ -78,7 +78,7 @@ body {
   background: #b64722;
 }
 
-@media only screen and (max-width: 78.15em) {
+@media only screen and (max-width: 576px) {
   .container {
     flex-direction: column;
     display: flex;
@@ -426,7 +426,7 @@ body {
   opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   html, body {
     overflow-y: auto;
   }
@@ -576,7 +576,7 @@ body {
   float: right;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .search-results {
     width: 100%;
     margin-top: 20rem;
@@ -746,7 +746,7 @@ body {
   font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .message {
     min-width: 100% !important;
   }

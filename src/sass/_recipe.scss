@@ -181,7 +181,7 @@
 }
 
 // Mobile
-@include mediumScreen {  
+@include mobileScreen {  
   .message {
     min-width: 100% !important;
   }
