@@ -1,10 +1,10 @@
-# forkify - Recippes WebApp
+# Forkify - Recipes WebApp
 
-# install dependencies
+# Install dependencies
 npm install
 
-# serve
+# Serve
 npm run start
 
-# build for production with minification
+# Build for production with minification
 npm run build
