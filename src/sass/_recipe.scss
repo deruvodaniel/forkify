@@ -68,6 +68,7 @@
     display: flex;
     align-items: center;
     padding: 7.5rem 8rem 3.5rem 8rem;
+    justify-content: space-between;
   }
 
   &__info {
@@ -100,9 +101,10 @@
   }
 
   &__user-generated {
+    display: none;
     background-color: darken($color-grey-light-2, 2%);
 
-    display: flex;
+    //display: flex;
     align-items: center;
     justify-content: center;
     height: 4rem;
