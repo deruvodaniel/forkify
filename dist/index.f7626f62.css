@@ -31,14 +31,13 @@ body {
 
 .container {
   max-width: 120rem;
-  min-height: 117rem;
+  min-height: fit-content;
   background-color: #fff;
   border-radius: 9px;
   grid-template: "head head" 10rem
                  "list recipe" minmax(100rem, auto)
                  / 1fr 2fr;
   margin: 4vw auto;
-  display: grid;
   overflow: hidden;
   box-shadow: 0 2rem 6rem .5rem #61555133;
 }
@@ -81,7 +80,7 @@ body {
 @media only screen and (max-width: 576px) {
   .container {
     flex-direction: column;
-    display: flex;
+    display: flex !important;
   }
 }
 
@@ -285,9 +284,10 @@ body {
 }
 
 .header {
-  background-color: #f9f5f3;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #fbdb89, #f48982);
   grid-area: head;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   display: flex;
 }
@@ -335,7 +335,7 @@ body {
   }
 
   .search__field::placeholder {
-    color: #fff;
+    font-size: 1.4rem;
   }
 }
 
@@ -347,6 +347,7 @@ body {
 .nav {
   align-self: stretch;
   margin-right: 2.5rem;
+  display: none;
 }
 
 .nav__list {
@@ -435,6 +436,7 @@ body {
     z-index: 9;
     width: 100%;
     flex-direction: column;
+    justify-content: center;
     padding: 2rem;
     position: fixed;
   }
@@ -549,12 +551,13 @@ body {
 .search-results {
   flex-direction: column;
   padding: 3rem 0;
-  display: flex;
+  display: none;
 }
 
 .results {
   margin-bottom: 2rem;
   list-style: none;
+  display: none;
 }
 
 .pagination {
@@ -585,6 +588,7 @@ body {
 
 .recipe {
   background-color: #f9f5f3;
+  display: none;
 }
 
 .recipe__fig {

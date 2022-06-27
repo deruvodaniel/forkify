@@ -1,9 +1,11 @@
 .header {
+  height: 100vh;
   grid-area: head;
   background-color: $color-grey-light-1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  background: linear-gradient(to bottom right, #fbdb89, #f48982);
 
   &__logo {
     margin-left: 4rem;
@@ -45,7 +47,7 @@
       width: auto;
 
       &::placeholder {
-        color: white;
+        font-size: 1.4rem;
       }
     }
   }
@@ -57,6 +59,7 @@
 }
 
 .nav {
+  display: none;
   align-self: stretch;
   margin-right: 2.5rem;
 
@@ -156,6 +159,7 @@
     width: 100%;
     flex-direction: column;
     padding: 2rem;
+    justify-content: center;
   }
 
   .header__logo{

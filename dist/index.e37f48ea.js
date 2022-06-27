@@ -636,7 +636,6 @@ const controlAddBookmark = function() {
 const showProgressModal = function(e1) {
     const btn = document.querySelector('.nav__btn--add-recipe');
     btn.addEventListener('click', function(e) {
-        console.log('dani');
         e.preventDefault;
         Swal.fire({
             icon: 'warning',
@@ -2995,8 +2994,25 @@ class searchView {
     _parentEl = document.querySelector('.search');
     getQuery() {
         const query = this._parentEl.querySelector('.search__field').value;
-        this._clearInput();
-        return query;
+        if (query === '') Swal.fire({
+            icon: 'info',
+            confirmButtonColor: '#f48982',
+            title: 'Welcome. Start by searching for a recipe or an ingredient. Have fun!'
+        });
+        else {
+            document.querySelector("body > div.container > header").style.height = 'auto';
+            document.querySelector("body > div.container > header").style.justifyContent = 'space-between';
+            document.querySelector("body > div.container > div.search-results").style.display = 'block';
+            document.querySelector("body > div.container > div.recipe").style.display = 'block';
+            document.querySelector("body > div.container > header > nav").style.display = 'block';
+            document.querySelector("body > div.container").style.display = 'grid';
+            document.querySelector("body > div.container > header").style.background = '#f9f5f3';
+            document.querySelector("body > div.container").style.minHeight = 'auto';
+            document.querySelector("body > div.container").style.display = 'grid';
+            document.querySelector("body > div.container > div.search-results > ul").style.display = 'block';
+            this._clearInput();
+            return query;
+        }
     }
     _clearInput() {
         this._parentEl.querySelector('.search__field').value = '';

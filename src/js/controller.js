@@ -127,7 +127,6 @@ const controlAddBookmark = function () {
 const showProgressModal = function (e) {
   const btn = document.querySelector('.nav__btn--add-recipe');
   btn.addEventListener('click', function (e) {
-    console.log('dani');
     e.preventDefault;
 
     Swal.fire({
