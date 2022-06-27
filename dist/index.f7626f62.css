@@ -30,23 +30,22 @@ body {
 }
 
 .container {
-  max-width: 120rem;
-  min-height: fit-content;
+  max-width: 100%;
   background-color: #fff;
   border-radius: 9px;
   grid-template: "head head" 10rem
                  "list recipe" minmax(100rem, auto)
                  / 1fr 2fr;
-  margin: 4vw auto;
+  margin: 0;
   overflow: hidden;
   box-shadow: 0 2rem 6rem .5rem #61555133;
 }
 
 @media only screen and (max-width: 78.15em) {
   .container {
-    max-width: 100%;
-    border-radius: 0;
-    margin: 0;
+    max-width: 100% !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
   }
 }
 
@@ -286,8 +285,9 @@ body {
 .header {
   height: 100vh;
   background: linear-gradient(to bottom right, #fbdb89, #f48982);
+  flex-direction: column;
   grid-area: head;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   display: flex;
 }
@@ -302,6 +302,7 @@ body {
   background-color: #fff;
   border-radius: 10rem;
   align-items: center;
+  margin-top: 4rem;
   padding-left: 3rem;
   transition: all .3s;
   display: flex;
@@ -435,10 +436,10 @@ body {
   .header {
     z-index: 9;
     width: 100%;
-    flex-direction: column;
     justify-content: center;
     padding: 2rem;
     position: fixed;
+    flex-direction: column !important;
   }
 
   .header__logo {
@@ -451,7 +452,7 @@ body {
 
   .nav__list {
     justify-content: space-around;
-    padding: 1rem;
+    padding: 2rem 1rem 1rem;
   }
 }
 

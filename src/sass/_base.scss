@@ -48,15 +48,13 @@ body {
 }
 
 .container {
-  max-width: 120rem;
-  min-height: fit-content;
-  margin: 4vw auto;
+  max-width: 100%;
+  margin: 0;
+  border-radius: 0;
   background-color: #fff;
   border-radius: 9px;
   overflow: hidden;
   box-shadow: 0 2rem 6rem 0.5rem rgba($color-grey-dark-1, 0.2);
-
-  // display: grid;
   grid-template-rows: 10rem minmax(100rem, auto);
   grid-template-columns: 1fr 2fr;
   grid-template-areas:
@@ -64,9 +62,9 @@ body {
     'list recipe';
 
   @media only screen and (max-width: $bp-large) {
-    max-width: 100%;
-    margin: 0;
-    border-radius: 0;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
   }
 }
 

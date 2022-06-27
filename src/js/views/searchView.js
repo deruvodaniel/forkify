@@ -5,7 +5,9 @@ class searchView {
     const query = this._parentEl.querySelector('.search__field').value;
 
     //Mostrando SOLO barra de buscador y alerta al usuario
+
     if (query === '') {
+      document.querySelector("body > div.container > div.search-results > div").style.display = 'none';
       Swal.fire({
         icon: 'info',
         confirmButtonColor: '#f48982',
@@ -13,16 +15,21 @@ class searchView {
         text: 'Start by searching for a recipe or an ingredient. Have fun!',
       })
     } else {
+      document.querySelector("body > div.container").style.display = 'grid';
+      document.querySelector("body > div.container").style.minHeight = 'auto';
+      document.querySelector("body > div.container").style.maxWidth = '120rem';
+      document.querySelector("body > div.container").style.minHeight = 'fit-content';
+      document.querySelector("body > div.container").style.margin = '4vw auto';
       document.querySelector("body > div.container > header").style.height = 'auto'
       document.querySelector("body > div.container > header").style.justifyContent = 'space-between';
-      document.querySelector("body > div.container > div.search-results").style.display = 'block';
-      document.querySelector("body > div.container > div.recipe").style.display = 'block';
-      document.querySelector("body > div.container > header > nav").style.display = 'block';
-      document.querySelector("body > div.container").style.display = 'grid';
       document.querySelector("body > div.container > header").style.background = '#f9f5f3';
-      document.querySelector("body > div.container").style.minHeight = 'auto';
-      document.querySelector("body > div.container").style.display = 'grid';
+      document.querySelector("body > div.container > header").style.flexDirection = 'row';
+      document.querySelector("body > div.container > header > nav").style.display = 'block';
+      document.querySelector("body > div.container > header > form").style.margin = '0';
+      document.querySelector("body > div.container > div.search-results").style.display = 'block';
+      document.querySelector("body > div.container > div.search-results > div").style.display = 'block';
       document.querySelector("body > div.container > div.search-results > ul").style.display = 'block';
+      document.querySelector("body > div.container > div.recipe").style.display = 'block';
 
       this._clearInput();
       return query;
