@@ -7,7 +7,8 @@ class searchView {
       Swal.fire({
         icon: 'info',
         confirmButtonColor: '#f48982',
-        title: 'Welcome. Start by searching for a recipe or an ingredient. Have fun!',
+        title: 'Welcome!',
+        text: 'Start by searching for a recipe or an ingredient. Have fun!',
       })
     } else {
       document.querySelector("body > div.container > header").style.height = 'auto'
