@@ -2994,6 +2994,7 @@ class searchView {
     _parentEl = document.querySelector('.search');
     getQuery() {
         const query = this._parentEl.querySelector('.search__field').value;
+        //Mostrando SOLO barra de buscador y alerta al usuario
         if (query === '') Swal.fire({
             icon: 'info',
             confirmButtonColor: '#f48982',
